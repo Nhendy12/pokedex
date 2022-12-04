@@ -5,11 +5,12 @@ class Api::PokemonController < ApplicationController
   def index
     @pokemon = Pokemon.all
 
-    render json: @pokemon
+    render json: @pokemon, include: [:types => {only: ['name', 'id']}] 
   end
 
   # POST /pokemon
   def create
+    puts pokemon_params
     @pokemon = Pokemon.new(pokemon_params)
     #add types to pokemon
     #@pokemon.types << @type
@@ -37,6 +38,6 @@ class Api::PokemonController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def pokemon_params
-      params.require(:pokemon).permit(:name)
+      params.require(:pokemon).permit(:name, :types => [:id, :name])
     end
 end

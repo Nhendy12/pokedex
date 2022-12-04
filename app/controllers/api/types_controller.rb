@@ -3,7 +3,7 @@ class Api::TypesController < ApplicationController
   def index
     @types = Type.all
 
-    render json: @types
+    render json: @types, only: ['name', 'id']
   end
 
   private
