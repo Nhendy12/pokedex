@@ -11,7 +11,8 @@ class Api::PokemonController < ApplicationController
   # POST /pokemon
   def create
     @pokemon = Pokemon.new(pokemon_params)
-
+    #add types to pokemon
+    #@pokemon.types << @type
     if @pokemon.save
       render json: @pokemon, status: :created, location: @pokemon
     else
