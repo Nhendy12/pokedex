@@ -5,17 +5,20 @@ class Api::PokemonController < ApplicationController
   def index
     @pokemon = Pokemon.all
 
-    render json: @pokemon, include: [:types => {only: ['name', 'id']}] 
+    render json: @pokemon, include: [:image, :types => {only: ['name', 'id']}], methods: [:image_url]
   end
 
   # POST /pokemon
   def create
-    puts pokemon_params
-    @pokemon = Pokemon.new(pokemon_params)
+    @pokemon = Pokemon.new(name: pokemon_params['name'], image: pokemon_params['image'])
+    types = JSON.parse(pokemon_params['types'])
     #add types to pokemon
-    #@pokemon.types << @type
+    types.each { |type| 
+      @type = Type.find(type['value'].to_i)
+      @pokemon.types << @type
+    }
     if @pokemon.save
-      render json: @pokemon, status: :created, location: @pokemon
+      render json: @pokemon, status: :created
     else
       render json: @pokemon.errors, status: :unprocessable_entity
     end
@@ -38,6 +41,6 @@ class Api::PokemonController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def pokemon_params
-      params.require(:pokemon).permit(:name, :types => [:id, :name])
+      params.require(:pokemon).permit(:name, :image, :types)
     end
 end
