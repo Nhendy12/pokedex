@@ -2,7 +2,6 @@ import { useEffect, useState } from 'react';
 import Types from './types';
 import axios from 'axios';
 
-
 const API_URL = 'http://localhost:3000/api/pokemon';
 
 function UpdatePokemonForm( current_pokemon, parentCallback ) {
@@ -27,16 +26,15 @@ function UpdatePokemonForm( current_pokemon, parentCallback ) {
     const id = current_pokemon.current_pokemon.id
     console.log("in submit, data = ", data);
     axios.put(API_URL + '/' + id, data)
-        .then(response => (parentCallback))
-        .catch((error) => console.log(error))
+      .then(response => (successfulUpdate))
+      .catch((error) => console.log(error))
   }
 
   function handleUserInput( e ) {
   }
 
   function successfulUpdate ( response ) {
-    console.log("");
-    parentCallback();
+    window.location.reload();
   }
   
   return (

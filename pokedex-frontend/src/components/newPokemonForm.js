@@ -27,8 +27,12 @@ function NewPokemonForm(setPokemon) {
   function submitToAPI( data ) {
     console.log("in submit, data = ", data);
     axios.post(API_URL, data)
-        .then(response => (setPokemon))
-        .catch((error) => console.log(error))
+      .then(response => (successfulUpdate(response)))
+      .catch((error) => console.log(error))
+  }
+
+  function successfulUpdate ( response ) {
+    window.location.reload();
   }
 
   function handleUserInput( e ) {
