@@ -1,9 +1,10 @@
-import logo from './logo.svg';
 import './App.css';
+import logo from './logo.png'; 
 import axios from 'axios';
 import Pokemon from './components/pokemon';
-import NewPokemonForm from './components/newPokemonForm';
 import { useEffect, useState } from 'react';
+import * as React from 'react';
+import AddPokemon from "./components/addPokemon";
 
 const API_URL = 'http://localhost:3000/api/pokemon';
 
@@ -26,10 +27,15 @@ function App() {
 
   return (
     <div className="App">
-      <header className="">
-        <NewPokemonForm/>
+      <header>
+        <div className='header'>
+          <div className="header-left">
+            <img src={logo} alt="pokedex-logo"/>
+          </div>
+        <AddPokemon/>
+        </div>
       </header>
-      <div className='pokemon-list'>
+      <div className='container'>
         <Pokemon pokemon={pokemon} />
       </div>
     </div>

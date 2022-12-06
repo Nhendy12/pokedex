@@ -1,18 +1,28 @@
 import React from 'react';
 
 function Pokemon(props) {
+
+    function addLeadingZeros(num, totalLength) {
+        return String(num).padStart(totalLength, '0');
+    }
+
     return(
-        <div>
-            API Pokemon
+        <div className='pokemon-grid'>
             {props.pokemon.map((item) => {
+                const classes = `round-top center ${item.types[0].name}`
                 return (
-                    <div key={item.id}>
-                        <img src={item.image_url}></img>
-                        <h2>{item.name}</h2>
-                        {item.types.map(type => {
-                            return <li>{type.name}</li>
-                        })}
-                        {console.log(item.image)}
+                    <div className="pokemon-card" key={item.id}>
+                        <div className={classes}>
+                            <img src={item.image_url} alt="Pokemon image"></img>
+                        </div>
+                        <div className="card-body">
+                            <h2 className='card-title'>{item.name} {addLeadingZeros(item.id, 3)}</h2>
+                            <ul className='card-type-list'>
+                            {item.types.map(type => {
+                                return <li className='card-type'>{type.name}</li>
+                            })}
+                            </ul>
+                        </div>
                     </div>
                 );
             })}
