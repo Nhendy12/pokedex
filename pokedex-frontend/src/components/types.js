@@ -8,16 +8,22 @@ function getAPIData() {
     return axios.get(API_URL).then((response) => response.data)
 }
 
-function Types( {setTypeChoice} ) {
+function Types( { setTypeChoice, props } ) {
     const [types, setTypes] = useState([]);
-
     const [typeChoice, handleTypeChange] = useState([]);
+
+    //console.log("prev type choice = ")
 
     useEffect(() => {    
         setTypeChoice(typeChoice)
     });
 
     const options = types.map(t => ({
+        "value" : t.id,
+        "label" : t.name
+    }))
+
+    const defaultValue = props.map(t => ({
         "value" : t.id,
         "label" : t.name
     }))
@@ -31,12 +37,12 @@ function Types( {setTypeChoice} ) {
         });
         return () => (mounted = false);
       }, []);
-    
+
     return (
         <div>
             <Select
                 closeMenuOnSelect={false}
-                //defaultValue={[colourOptions[0], colourOptions[1]]}
+                defaultValue={defaultValue}
                 isMulti
                 //onChange={console.log(selectedOption)}
                 options={options}

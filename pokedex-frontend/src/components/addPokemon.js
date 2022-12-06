@@ -19,7 +19,7 @@ const style = {
 };
 
 function AddPokemon(props) {
-    const [open, setOpen] = React.useState(false);
+    const [open, setOpen] = React.useState(false); 
     const handleOpen = () => setOpen(true);
     const handleClose = () => setOpen(false);
 
@@ -28,14 +28,14 @@ function AddPokemon(props) {
             <button className='open-btn' onClick={handleOpen}><img src={Pokeball}></img>Add New Pokemon</button>
             
             <Modal
-            open={open}
-            onClose={handleClose}
-            aria-labelledby="modal-modal-title"
-            aria-describedby="modal-modal-description"
-            >
-            <Box sx={style}>
-                <NewPokemonForm/>
-            </Box>
+                open={open}
+                onClose={handleClose}
+                aria-labelledby="modal-modal-title"
+                aria-describedby="modal-modal-description"
+                >
+                <Box sx={style}>
+                    <NewPokemonForm/>
+                </Box>
             </Modal>
         </div>
     )
