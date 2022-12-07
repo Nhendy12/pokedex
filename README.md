@@ -9,7 +9,7 @@ A Fullstack CRU Pokemon App built with React and Ruby on Rails.
 * [Screenshots](#screenshots)
 * [Setup](#setup)
 * [Usage](#usage)
-* [Room for Improvement](#room-for-improvement)
+* [Room for Improvement](#final-thoughtsroom-for-improvement)
 
 ## General Info
 For simplicity, both the backend and front end will be contained in the same GitHub. If this were a larger project I would most definitely separate the Front and Backend.\
@@ -42,6 +42,8 @@ React Libraries:
 
 ## Screenshot
 ![Screenshot](app/assets/images/pokemon-pics/screenshots/Screenshot1.png)
+![Screenshot](app/assets/images/pokemon-pics/screenshots/Screenshot2.png)
+![Screenshot](app/assets/images/pokemon-pics/screenshots/Screenshot3.png)
 
 ## Setup
 To clone and run this application, you'll need [Git](https://git-scm.com), [Ruby on Rails](https://www.tutorialspoint.com/ruby-on-rails/rails-installation.htm), and [Node.js](https://nodejs.org/en/download/) (which comes with [npm](http://npmjs.com)) installed on your computer.
