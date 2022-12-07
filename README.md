@@ -1,4 +1,4 @@
-# Pokedex 👾
+# Pokedex
 
 A Fullstack CRU Pokemon App built with React and Ruby on Rails.
 
