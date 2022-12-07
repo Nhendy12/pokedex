@@ -19,8 +19,8 @@ For simplicity, both the backend and front end will be contained in the same Git
 
 ## Built With ⚡️
 Project is created with:
-* Ruby version: 12.3
-* Rails version: 3.1.2
+* Ruby version: 3.1.2
+* Rails version: 7.0.4
 * React version: 18.2.0
 
 Gems:
