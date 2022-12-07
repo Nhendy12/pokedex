@@ -26,8 +26,8 @@ function UpdatePokemonForm( current_pokemon, parentCallback ) {
     const id = current_pokemon.current_pokemon.id
     console.log("in submit, data = ", data);
     axios.put(API_URL + '/' + id, data)
-      .then(response => (successfulUpdate))
-      .catch((error) => console.log(error))
+        .then(response => (successfulUpdate(response)))
+        .catch((error) => console.log(error))
   }
 
   function handleUserInput( e ) {

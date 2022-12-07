@@ -1,15 +1,25 @@
 class Api::PokemonController < ApplicationController
   before_action :set_pokemon, only: %i[ update ]
 
+  include Pagy::Backend
+
   # GET /pokemon
   def index
-    @pokemon = Pokemon.all
+    pokemon = Pokemon.all
+    if params["page"].present?
+      page_number = params["page"] 
+    else
+      page_number = 1
+    end
 
-    render json: @pokemon, include: [:image, :types => {only: ['name', 'id']}], methods: [:image_url]
+    @pagy, @pokemon = pagy(pokemon, page: page_number, items:20)
+
+    render json: { data: @pokemon.as_json(include: [:image, :types => {only: ['name', 'id']}], methods: [:image_url]), 
+                  pagy: pagy_metadata(@pagy) }
   end
 
   # POST /pokemon
-  def create
+  def create  
     @pokemon = Pokemon.new(name: pokemon_params['name'], image: pokemon_params['image'])
     types = JSON.parse(pokemon_params['types'])
     #add types to pokemon

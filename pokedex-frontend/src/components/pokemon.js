@@ -23,6 +23,11 @@ function Pokemon( props ) {
     const [open, setOpen] = React.useState(false); 
     const [current_pokemon, setPokemon] = React.useState(); 
     const [state, updateState] = React.useState();
+    const [list, setList] = React.useState([]);
+
+    useEffect(() => {
+        setList(props.pokemon);
+    });
 
     useEffect(() => {
         updateState();
@@ -53,7 +58,7 @@ function Pokemon( props ) {
                     <UpdatePokemonForm current_pokemon={current_pokemon} updateState={updateState} />        
                 </Box>
             </Modal>
-            {props.pokemon.map((item) => {
+            {list.map((item) => {
                 const classes = `round-top center img-div ${item.types[0].name}`
                 return (
                     <div className="pokemon-card" onClick={() => handleOpen(item)} key={item.id}>
