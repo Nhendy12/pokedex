@@ -1,23 +1,23 @@
-# Pokedex
+# Pokedex 👾
 
 A Fullstack CRU Pokemon App built with React and Ruby on Rails.
 
-## Table of Contents
-* [General Info](#general-information)
-* [Built With](#technologies-used)
+## Table of Contents 📖
+* [General Info](#general-info)
+* [Built With](#built-with)
 * [Features](#features)
 * [Screenshots](#screenshots)
 * [Setup](#setup)
 * [Usage](#usage)
-* [Room for Improvement](#final-thoughtsroom-for-improvement)
+* [Final Thoughts/Room for Improvement](#final-thoughtsroom-for-improvement)
 
-## General Info
+## General Info 📝
 For simplicity, both the backend and front end will be contained in the same GitHub. If this were a larger project I would most definitely separate the Front and Backend.\
 \
-[Here is a link](DESIGN_DOC) to the design doc that helped guide me through the project.
+[Here is a link](DESIGN_DOC.pdf) to the design doc that helped guide me through the project.
 
 
-## Built With
+## Built With ⚡️
 Project is created with:
 * Ruby version: 12.3
 * Rails version: 3.1.2
@@ -34,18 +34,18 @@ React Libraries:
 * react-select
 * mui/material
 
-## Features
+## Features 🎯
 * Add Pokemon
 * Update Pokemon
 * Pagination
 * Responsive Front End
 
-## Screenshots
+## Screenshots 📸
 ![Screenshot](app/assets/images/pokemon-pics/screenshots/Screenshot1.png)
 ![Screenshot](app/assets/images/pokemon-pics/screenshots/Screenshot2.png)
 ![Screenshot](app/assets/images/pokemon-pics/screenshots/Screenshot3.png)
 
-## Setup
+## Setup ⚙️
 To clone and run this application, you'll need [Git](https://git-scm.com), [Ruby on Rails](https://www.tutorialspoint.com/ruby-on-rails/rails-installation.htm), and [Node.js](https://nodejs.org/en/download/) (which comes with [npm](http://npmjs.com)) installed on your computer.
 ```
 # Clone this repository
@@ -55,7 +55,7 @@ $ git clone https://github.com/Nhendy12/pokedex.git
 $ cd pokedex
 ```
 
-## Usage
+## Usage 🚂
 
 ```bash
 #for Backend
@@ -79,7 +79,7 @@ $ npm install
 $ npm start
 ```
 
-## Final Thoughts/Room for Improvement
+## Final Thoughts/Room for Improvement 🔔
 I really enjoyed working on this project and I loved the pokemon aspect that added that personal touch!\
 It definitely helped me brush up on my React skills and I think in the future I will be adding more to this project!
 
@@ -92,3 +92,4 @@ Items I missed/would have done with more time:
 * Empty States
 * demo
 * API docs
+* File structure/css organization
