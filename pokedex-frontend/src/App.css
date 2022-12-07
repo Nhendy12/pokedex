@@ -1,11 +1,5 @@
-.App {
+body {
   background-color: #FAFAFA;
-  height: 100%;
-  position:absolute;
-  top:0px;
-  right:0px;
-  bottom:0px;
-  left:0px;
 }
 
 .App-logo {
@@ -92,6 +86,7 @@
   margin-right: auto;
   margin-left: auto;
   margin-bottom: 5rem;
+  padding: 0;
 }
 
 .pokemon-grid {
@@ -99,6 +94,48 @@
   grid-template-columns: auto auto auto auto;
   grid-gap: 36px;
   margin-bottom: 2rem;
+}
+
+@media (max-width: 1499px) {
+  .pokemon-grid {
+    grid-template-columns: 333px 333px 333px;
+    width: 1071px;    
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media (max-width: 1120px) {
+  .pokemon-grid {
+    grid-template-columns: 333px 333px;
+    width: 700px;    
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media (max-width: 775px) {
+  .pokemon-grid {
+    grid-template-columns: 333px;
+    width: 333px;    
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .header-right {
+    float: unset;
+    padding-top: 25px;
+    text-align: center;
+  }
+  .header-left {
+    float: unset;
+  }
+  .header {
+    height: 230px;
+    text-align: center;
+  }
+  .open-btn {
+    margin: auto;
+  }
 }
 
 .paginate-div {
@@ -113,11 +150,16 @@
   background: #FFFFFF;
   box-shadow: 0px 8px 16px 4px rgba(0, 0, 0, 0.05);
   border-radius: 16px;
-  min-width: 333px;
+  width: 333px;
 }
+
 
 .img-div {
   height: 175px;
+}
+
+.image {
+  padding-top: 10px;
 }
 
 .card-body {
@@ -237,12 +279,12 @@
 }
 
 .add-btn:hover {
-  background: #cc7b6b;
+  background-color:rgba(235, 84, 53, .7);
   border: solid 1px #EB5435;
 }
 
 .add-btn:active {
-  background-color: #cc7b6b;
+  background-color:rgba(235, 84, 53, .7);
   box-shadow: 0 5px #666;
   transform: translateY(4px);
 }
@@ -253,59 +295,63 @@
   border-top-right-radius: 16px;
 }
 
+.error {
+  color: red;
+}
+
 .normal {
-  background-color:#AAAA9B;
+  background-color: rgba(170, 170, 155, .7);
 }
 .fire {
-  background-color:#EB5435;
+  background-color:rgba(235, 84, 53, .7);
 } 
-.water {
-  background-color: #3399FE;
+.water {  
+  background-color: rgba(51, 153, 254, .7);
 } 
 .grass {
-  background-color: #76CC55;
+  background-color: rgba(118, 204, 85, .7);
 }
 .electric {
-  background-color:#FFCC33;
+  background-color:rgba(255, 204, 51, .7);
 }
 .ice {
-  background-color: #65CCFF;
+  background-color: rgba(101, 204, 255, .7);
 } 
 .fighting {
-  background-color: #BA5544;
+  background-color: rgba(186, 85, 68, .7);
 }  
 .poison {
-  background-color: #AA5599;
+  background-color: rgba(170, 85, 153, .7);
 }  
 .ground {
-  background-color: #DDBB54;
+  background-color: rgba(221, 187, 84, .7);
 }  
 .flying {
-  background-color: #8799FF;
+  background-color: rgba(135, 153, 255, .7);
 }  
 .psychic {
-  background-color: #FF5599;
+  background-color: rgba(255, 85, 153, .7);
 }  
 .bug {
-  background-color: #A9BB22;
+  background-color: rgba(169, 187, 34, .7);
 } 
 .rock {
-  background-color: #BBAA66;
+  background-color: rgba(187, 170, 102, .7);
 }
 .ghost {
-  background-color: #6666BA;
+  background-color: rgba(102, 102, 186, .7);
 }
 .dark {
-  background-color: #775444;
+  background-color: rgba(119, 84, 68, .7);
 }
 .dragon {
-  background-color: #6666BA;
+  background-color: rgba(102, 102, 186, .7);
 }
 .steel {
-  background-color: #AAAABB;
+  background-color: rgba(170, 170, 187, .7);
 }
 .fairy {
-  background-color: #EE99EE;
+  background-color: rgba(238, 153, 238, .7);
 }
 
 @import "https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css";

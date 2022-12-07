@@ -38,7 +38,7 @@ function UpdatePokemonForm( current_pokemon, parentCallback ) {
   }
   
   return (
-    <div>
+    <div className='formDiv'>
       <h2 className='add-title'>Edit Pokemon</h2>
       <form onSubmit={(e) => handleSubmitForm(e)}>
         <label className='form-label' htmlFor='image'>Photo</label>

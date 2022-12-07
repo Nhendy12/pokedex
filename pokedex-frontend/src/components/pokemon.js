@@ -63,7 +63,7 @@ function Pokemon( props ) {
                 return (
                     <div className="pokemon-card" onClick={() => handleOpen(item)} key={item.id}>
                         <div className={classes}>
-                            <img src={item.image_url} alt="Pokemon image"></img>
+                            <img className='image' src={item.image_url} alt="Pokemon image"></img>
                         </div>
                         <div className="card-body">
                             <h2 className='card-title'>{item.name} {addLeadingZeros(item.id, 3)}</h2>

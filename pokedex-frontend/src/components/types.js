@@ -39,7 +39,7 @@ function Types( { setTypeChoice, props } ) {
       }, []);
 
     return (
-        <div>
+        <div className='types-div'>
             <Select
                 closeMenuOnSelect={false}
                 defaultValue={defaultValue}
