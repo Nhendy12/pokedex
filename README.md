@@ -17,3 +17,5 @@ A Fullstack CRU Pokemon App built with React and Ruby on Rails.
 ## General info
 For simplicity both the backend and frontend will be contained in the same github. If this was a larger project I would most definitely separate the Front and Backend.
 
+![alt text](https://github.com/[Nhendy12]/[pokedex]/blob/[branch]/image.jpg?raw=true)
+[Here is a link to the design doc]()
