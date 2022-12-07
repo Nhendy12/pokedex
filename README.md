@@ -40,7 +40,7 @@ React Libraries:
 * Pagination
 * Responsive Front End
 
-## Screenshot
+## Screenshots
 ![Screenshot](app/assets/images/pokemon-pics/screenshots/Screenshot1.png)
 ![Screenshot](app/assets/images/pokemon-pics/screenshots/Screenshot2.png)
 ![Screenshot](app/assets/images/pokemon-pics/screenshots/Screenshot3.png)
