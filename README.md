@@ -4,10 +4,10 @@ A Fullstack CRU Pokemon App built with React and Ruby on Rails.
 
 ## Table of Contents 📖
 * [General Info](#general-info-)
-* [Built With](#built-with-)
+* [Built With](#built-with-%EF%B8%8F)
 * [Features](#features-)
 * [Screenshots](#screenshots-)
-* [Setup](#setup-)
+* [Setup](#setup-%EF%B8%8F)
 * [Usage](#usage-)
 * [Final Thoughts/Room for Improvement](#final-thoughtsroom-for-improvement-)
 
